@@ -1,0 +1,70 @@
+<?php
+$con = mysqli_connect("localhost","root","","ntop10");
+
+if (mysqli_connect_errno()) {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  exit();
+}
+
+$sql = "SELECT `pprice`FROM `product` WHERE pcode= 12";
+$result = mysqli_query($con, $sql);
+
+mysqli_close($con);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z flip</title>
+    <link rel="stylesheet" href="style sheet Z-flip.css">
+    <link rel="shortcut icon" href="../logo-maison.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <form action="" method="post"></form>
+    <div class="topnav">
+      <a href="../تسجيل دخول/loogin.php" title=""><i class="fa fa-fw fa-user"></i> logout</a>
+      <input type="text" placeholder="بحث">
+      <label for="Search"></label>
+      <a href="#"><i class="fa fa-fw fa-search"></i></a>
+    </div>
+
+    <nav>   
+        <a href="../Home page/home page.html">Home</a>
+        <a href="../about/About.html">About</a>
+        <a href="../Services/Services.html">Services</a>
+        <!-- <a href="#">Gallery</a> -->
+        <a href="../contact/contact.html">Contact us</a>
+     <span class="logo"><a class="logo" href="../top 10 page/top 10 page .html"><img class="logo-1" src="../logo-maison.jpg" alt="logo" width="200px" height="200px"></a></span>    
+    </nav>
+
+    <ul>
+        <video autoplay muted loop id="Flip4_Carousel_AnimatedKV_PC-video.mp4" controls width="1150px" height="400px" src="../Z-flip 4/Flip4_Carousel_AnimatedKV_PC-video.mp4"></video>
+        <img class="img-1" src="../Z-flip 4/galaxy-z-flip4_highlights_colors_blue_front.webp" alt="" width="450px" height="450px" >
+        <img class="img-2" src="../Z-flip 4/samsung galaxy Z flip 4-pic.webp" alt="" width="450px" height="450px" >
+        <h3>Samsung Galaxy Z flip 4</h3>
+        <b>
+            <div>
+                أعلنت شركة سامسونج عن هاتفها الرائد القابل للطي الموجه للشباب وهو الـ Samsung Galaxy Z Flip 4 فشركة سامسونج تنافس بقوة في هذه الفئة فهي أصل الشاشات القابلة للطي مع الاهتمام بالمواصفات الأخرى حيث تم إستخدام أقوى معالج موجود على الساحة حالياً من شركة كوالكم من نوع Snapdragon 8 Plus Gen 1 مع تحسين البطارية بالمقارنة مع الإصدار السابق فدعونا نتعرف على المواصفات الكاملة لهاتف وما هي اهم مميزاته وعيوبه وهل يستحق الشراء أم لا وهذا ما سنتعرف على فيما يلي على النحو التالي
+            </div> 
+            <br> <br>
+            <li>المعالج: ثماني النواة Snapdragon 8 Plus Gen 1 تكنولوجيا 4 نانو</li>
+            <li>التخزين / الرام: 256 جيجا مع 8 جيجا رام</li>
+            <li>الكاميرا: خلفية مزدوجة 12+12 م.ب. / امامية 10 م.ب.</li>
+            <li>الشاشة: الأولى: 6.7 بوصة بدقة FHD+ والثانية: 1.9 بوصة</li>
+            <li>نظام التشغيل: اندرويد 12</li>
+            <li>البطارية: 3700 مللي أمبير</li>
+            <li><h3><?php while($row = mysqli_fetch_assoc($result)) { ?>
+            <tr>
+                <td><?php echo "السعر: ";
+                echo $row['pprice']; ?></td>
+        <?php } ?></h3></li> 
+            <br>
+            <li><button><a href="../Confirm the purchase/Confirm Samsung Galaxy Z flip 4/Confirm Samsung Galaxy Z flip 4.php">Add to curt</a></button></li>  
+        </b>
+    </ul>
+
+</body>
+</html>

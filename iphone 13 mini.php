@@ -1,0 +1,69 @@
+<?php
+$con = mysqli_connect("localhost","root","","ntop10");
+
+if (mysqli_connect_errno()) {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  exit();
+}
+
+$sql = "SELECT `pprice`FROM `product` WHERE pcode= 4";
+$result = mysqli_query($con, $sql);
+
+mysqli_close($con);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iphone 13 mimi</title>
+    <link rel="stylesheet" href="style sheet iphone 13 mini.css">
+    <link rel="shortcut icon" href="../logo-maison.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <form action="" method="post"></form>
+    <div class="topnav">
+      <a href="../تسجيل دخول/loogin.php" title=""><i class="fa fa-fw fa-user"></i> logout</a>
+      <input type="text" placeholder="بحث">
+      <label for="Search"></label>
+      <a href="#"><i class="fa fa-fw fa-search"></i></a>
+    </div>
+
+    <nav>   
+        <a href="../Home page/home page.html">Home</a>
+        <a href="../about/About.html">About</a>
+        <a href="../Services/Services.html">Services</a>
+        <!-- <a href="#">Gallery</a> -->
+        <a href="../contact/contact.html">Contact us</a>
+     <span class="logo"><a class="logo" href="../top 10 page/top 10 page .html"><img class="logo-1" src="../logo-maison.jpg" alt="logo" width="250px" height="250px"></a></span>    
+    </nav>
+    <div class="mob">
+        <img class="img-1" src="../i phone 13 mini/New folder/iphone-13-mini_front-removebg-preview.png" alt="" width="450px" height="450px">
+        
+        <img class="img-2" src="../i phone 13 mini/New folder/iphone-13-mini_back-removebg-preview.png" alt="" width="450px" height="450px"> 
+    </div> 
+    <h3>Iphone 13 mini</h3>
+    <b>
+        <div>
+            أعلنت شركة ابل عن هواتفها الجديد في سلسلة الـ iPhone 13 ليكون هاتف iPhone 13 Mini هو الهاتف الأرخص والاقل من حيث المواصفات في السلسلة ولكن بالرغم من ذلك إلا أن الهاتف ما زال لديه ما يجعله الأفضل حيث يحتوى على معالج الـ A15 Bionic بتكنولوجيا الـ 5 نانو والذي يحقق أقوى أداء ممكن بالمقارنة مع الهواتف المنافسة ولكن للأسف الشاشة تأتي بمساحة صغيرة فدعونا نتعرف على المواصفات الكاملة لهاتف iPhone 13 Mini وما هي أهم مميزاته وعيوبه وهل يستحق أن يكون الأفضل في 2021 أم لا دعونا نتعرف على ذلك من خلال النحو التالي فيما يلي .
+        </div>
+        <ul>
+            <li>المعالج: سداسي النواة Apple A15 Bionic تكنولوجيا 5 نانو</li>
+            <li>التخزين / الرام: 128/256/512 جيجا مع 4 جيجا رام</li>
+            <li>الكاميرا: خلفية ثنائية 12+12 / امامية 12+SL 3D</li>
+            <li>الشاشة: 5.4 بوصة بدقة 1080x2340 بها نوتش كبير</li>
+            <li>نظام التشغيل: IOS 15</li>
+            <li>البطارية: 2438 مللي أمبير</li>
+            <li><h3><?php while($row = mysqli_fetch_assoc($result)) { ?>
+            <tr>
+                <td><?php echo "السعر: ";
+                echo $row['pprice']; ?></td>
+        <?php } ?></h3></li>
+            <br>
+            <li><a href="../Confirm the purchase/Confirm Iphone 13 mini/Confirm Iphone 13 mini.php" class= "as">Add to curt</a></li>  
+        </ul>
+    </b>
+</body>
+</html>

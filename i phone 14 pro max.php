@@ -1,0 +1,77 @@
+<?php
+$con = mysqli_connect("localhost","root","","ntop10");
+
+if (mysqli_connect_errno()) {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  exit();
+}
+
+$sql = "SELECT `pprice`FROM `product` WHERE pcode= 2";
+$result = mysqli_query($con, $sql);
+
+mysqli_close($con);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I phone 14 pro max</title>
+    <link rel="stylesheet" href="i phone 14 pro max.css">
+    <link rel="shortcut icon" href="../logo-maison.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <form action="" method="post"></form>
+    <div class="topnav">
+      <a href="../تسجيل دخول/loogin.php" title=""><i class="fa fa-fw fa-user"></i> logout</a>
+      <input type="text" placeholder="بحث">
+      <label for="Search"></label>
+      <a href="#"><i class="fa fa-fw fa-search"></i></a>
+    </div>
+    <nav>   
+        <a href="../Home page/home page.html">Home</a>
+        <a href="../about/About.html">About</a>
+        <a href="../Services/Services.html">Services</a>
+        <!-- <a href="#">Gallery</a> -->
+        <a href="../contact/contact.html">Contact us</a>
+     <span class="logo"><a class="logo" href="../top 10 page/top 10 page .html"><img class="logo-1" src="../logo-maison.jpg" alt="logo" width="200px" height="200px"></a></span>    
+</nav> 
+<ul>
+    <video autoplay muted loop src="../i phone 14 pro/14 pro video.mp4" controls width="1600px" height="350px"></video>
+    <img class="img-1" src="../i phone 14 pro/Apple-iphone-14-pro-white-removebg-preview.png" alt=""> 
+    <img class="img-2" src="../i phone 14 pro/Apple-iphone-14-pro-black-removebg-preview.png" alt="">
+    <li> <h3>I phone 14 pro max</h3></li>
+    <b>
+        <div>
+            يعد هاتف الـ iPhone 14 Pro Max هو الهاتف الأغلى من شركة أبل ولقد تم تطويره بشكل كبير عن الجيل السابق iPhone 13 Pro Max حيث يأتي بشاشة مختلف مع دعم خاصية الـ Always On display لتستطيع معرفة الاشعارات بشكل لحظي وسريع مع تحسين الكاميرات بشكل كبير واستخدام معالج أقوى .. فدعونا نتعرف على بقية المواصفات وهل يستحق الهاتف الشراء        </div>
+    </b>
+        <br> <br>
+    <b>
+
+        <li>
+            المعالج: سداسي النواة Apple A16 Bionic تكنولوجيا 4 نانو        </li>
+        <li>
+            التخزين / الرام: 128/256/512/1000 جيجا مع 6 جيجا رام
+        </li>
+        <li>
+            الكاميرا: خلفية 48+12+12 م.ب.+TOF 3D / امامية 12+SL 3D
+        </li>
+        <li>
+            الشاشة: 6.1 بوصة بدقة 1179x2556 بها نوتش جديد
+         </li>
+            <li>نظام التشغيل: IOS 16</li>
+             <li>
+                البطارية: 3200 مللي أمبير</li>   
+            <li><h3<li> <h3><?php while($row = mysqli_fetch_assoc($result)) { ?>
+            <tr>
+                <td><?php echo "السعر: ";
+                echo $row['pprice']; ?></td>
+        <?php } ?></h3></li>
+    </b>    
+        
+    <li><button><a href="../Confirm the purchase/Confirm Iphone 14 pro max/Confirm Iphone 14 pro max.php">Add to curt</a></button></li>  
+</ul>
+</body>
+</html>
